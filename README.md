@@ -22,6 +22,7 @@ Press alt+SPACE to access the terminal. TODO: Expand on this.
 ### Commands
 
 The following have been implemented:
+
 * new
 ** Clears the editor buffer
 * clear
