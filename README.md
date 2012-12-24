@@ -5,7 +5,6 @@ At the moment it exists simply for me to experiment more with:
 * [HTML5 Web Storage](http://en.wikipedia.org/wiki/Web_storage)
 * [Cross-origin resource sharing](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 * [Dojo Toolkit](http://dojotoolkit.org/)
-** [Dojo UI](http://dojotoolkit.org/widgets/)
 
 LucidEd
 =======
@@ -17,80 +16,21 @@ A terminal can be used to invoke commands.
 
 ## REPL Terminal
 
-Press alt+SPACE to access the terminal. TODO: Expand on this.
+Press Alt+SPACE to access the terminal. TODO: Expand on this.
 
 ### Commands
 
 The following have been implemented:
 
-* new
-** Clears the editor buffer
-* clear
-** Clears the output buffer
-* get _URI_
-** Reads the contents of the URI into the edit pane
-* help
-** Feature temporarily removed
-* load _key_
-** Load from HTML 5 local storage
-* save _key_
-** Load from HTML 5 local storage
-* mode
-** Sets the highlighter mode (provided by CodeMirror)
-** Currently Available:
-*** clike
-*** clojure
-*** coffeescript
-*** commonlisp
-*** css
-*** diff
-*** ecl
-*** erlang
-*** gfm
-*** go
-*** groovy
-*** haskell
-*** haxe
-*** htmlembedded
-*** htmlmixed
-*** http
-*** javascript
-*** jinja2
-*** less
-*** lua
-*** markdown
-*** mysql
-*** ntriples
-*** ocaml
-*** pascal
-*** perl
-*** php
-*** pig
-*** plsql
-*** properties
-*** python
-*** r
-*** rpm
-*** rst
-*** ruby
-*** rust
-*** scheme
-*** shell
-*** sieve
-*** smalltalk
-*** smarty
-*** sparql
-*** stex
-*** tiddlywiki
-*** tiki
-*** vb
-*** vbscript
-*** velocity
-*** verilog
-*** xml
-*** xquery
-*** yaml
-*** z80
+* new - Clears the editor buffer
+* clear - Clears the output buffer
+* get _URI_ - Reads the contents of the URI into the edit pane
+* help - Feature temporarily removed
+* load _key_ - Load from HTML 5 local storage
+* save _key_ - Load from HTML 5 local storage
+* mode - Sets the highlighter mode (provided by CodeMirror)
+
+Currently Available Modes: clike,  clojure,  coffeescript,  commonlisp,  css,  diff,  ecl,  erlang,  gfm,  go,  groovy,  haskell,  haxe,  htmlembedded,  htmlmixed,  http,  javascript,  jinja2,  less,  lua,  markdown,  mysql,  ntriples,  ocaml,  pascal,  perl,  php,  pig,  plsql,  properties,  python,  r,  rpm,  rst,  ruby,  rust,  scheme,  shell,  sieve,  smalltalk,  smarty,  sparql,  stex,  tiddlywiki,  tiki,  vb,  vbscript,  velocity,  verilog,  xml,  xquery,  yaml,  z80
 
 ## Thanks
 
