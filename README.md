@@ -9,7 +9,7 @@ At the moment it exists simply for me to experiment more with:
 LucidEd
 =======
 
-[Lucid Edit](http://nqd.me/lucided) is a browser-based text editor which can read/write to and from files, RESTful
+[Lucid Edit](http://nqd.me/lucided/editor.html) is a browser-based text editor which can read/write to and from files, RESTful
 web services, and HTML5 Web Storage.
 
 A terminal can be used to invoke commands.
