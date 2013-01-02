@@ -1,0 +1,69 @@
+/*
+    LucidEd - Lucid Edit, a browser-based text editor
+    Copyright (C) 2012  David Duong
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+.CodeMirror {
+	width: 100%;
+	height: 100%;
+}
+
+#repl {
+   position: absolute;
+   left: 3em;
+   bottom: 0;
+   right: 0;
+   z-index: 15;
+   font-family: monospace;
+}
+
+.error {
+	color: red;
+}
+
+.response {
+	white-space: pre;
+	border-bottom: 1px black;
+}
+.terminated {
+	font-style: italic;
+}
+
+#repl .dijitTabPane {
+	max-height: 10em;
+	overflow: scroll;
+}
+#repl .REPLOutputPane {
+	max-height: 10em;
+	overflow: scroll;
+}
+#repl .REPLExpressionInput {
+	width: 100%;
+	border: 0;
+}
+#repl .REPLInputPane {
+	padding-left: 1em;
+}
+#repl .REPLPrefix {
+	position: absolute;
+	margin-left: -1em;
+}
