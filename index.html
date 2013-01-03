@@ -95,7 +95,7 @@ require([
 				"dojo/request",
 				"pagedown/Markdown.Converter"
 			], function (request) {
-				request('README.md').then(function (content) {
+				request('README.markdown').then(function (content) {
 					var converter = new Markdown.Converter();
 					self.set('content', converter.makeHtml(content))
 				});
