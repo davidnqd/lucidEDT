@@ -103,6 +103,19 @@ require([
 		}
 	});
 
+	repl.createTab({
+		title: "Pagedown Preview",
+		onShow: function() {
+			var self = this;
+			require([
+				"pagedown/Markdown.Converter"
+			], function () {
+				var converter = new Markdown.Converter();
+				self.set('content', converter.makeHtml(lucid.text));
+			});
+		}
+	});
+
 	if (!('lucid_init' in window.localStorage)) {
 		window.localStorage['lucid_init'] = "l = lucid\nlucid.request 'README.markdown'";
 	}

@@ -31,16 +31,13 @@ which can be accessed by either opening the 'Console' tab or pressing ESCAPE. A
 
 The following methods and properties are provided for convenience:
 
-* lucid.request(url, options)
+* lucid.request url[, options]
  * Wraps [dojo/request](http://dojotoolkit.org/reference-guide/1.8/dojo/request.html)
- * Function used to perform AJAX requests.
- * The returned text content will be loaded into `lucid.text`
- * e.g. lucid.request 'http://lucided.com/demo/README.markdown'
-* lucid.print(message)
- * Prints to repl console
+ * The returned text content will be loaded into the editor
+ * ex. lucid.request 'http://lucided.com/demo/README.markdown'
+* lucid.print message
  * Alias for lucid.repl.print
-* lucid.printError(message)
- * Prints to repl console
+* lucid.printError message
  * Alias for lucid.repl.printError
 * lucid.editor
  * Reference to the CodeMirror editor instance
@@ -55,11 +52,11 @@ lua, markdown, mysql, ntriples, ocaml, pascal, perl, php, pig, plsql, properties
 r, rpm, rst, ruby, rust, scheme, shell, sieve, smalltalk, smarty, sparql, stex,
 tiddlywiki, tiki, vb, vbscript, velocity, verilog, xml, xquery, yaml, z80
 
-Thanks
-------
+Made Possible With
+------------------
 
-* [Dojo Toolkit](http://dojotoolkit.org/)
 * [CodeMirror](http://codemirror.net/)
   * Provided the editor with syntax highlighting
-
-
+* [CoffeeScript](http://coffeescript.org/)
+* [Dojo Toolkit](http://dojotoolkit.org/)
+* [PageDown](http://code.google.com/p/pagedown/)
