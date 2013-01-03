@@ -46,20 +46,20 @@ var dojoConfig = {
 };
 // -->
 </script>
+<!--
     <link rel="stylesheet" href="lib/dijit/themes/nihilo/nihilo.css">
     <script src="lib/dojo/dojo.js"></script>
+-->
 
-<!--
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dojo/dojo.js"></script>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/nihilo/nihilo.css">
--->
 <script type="text/javascript">
 <!--
 require([
     "dojo/keys",
     "dojo/on",
     "lucided/REPL",
-    "lucided/cmWrapperFactory",
+    "lucided/lucid",
     "codemirror/lib/codemirror",
     "dojo/domReady!"
 ], function (keys, on, REPL, wrapper) {
@@ -68,22 +68,18 @@ require([
     repl.startup();
 
     var editor = CodeMirror(document.body, {
-//        extraKeys: {"Alt-Space": function () {}},
         lineNumbers: true,
         autofocus: true
     });
 
     on(document.body, "keydown", function (evt) {
         if (evt.keyCode === keys.ESCAPE) {
-            // TODO: repl.set('selected', REPL.console);
-            var select = repl.hideTab;
-            select = (repl.tabContainer.selectedChildWidget != repl.hideTab)? repl.hideTab: repl.consoleTabContents;
+            var select = (repl.tabContainer.selectedChildWidget != repl.hideTab)? repl.hideTab: repl.consoleTabContents;
 	        repl.tabContainer.selectChild(select);
         }
     }); 
 
     on(repl, "blur", function () {
-        // TODO: repl.set('selected', REPL.hide);
         repl.tabContainer.selectChild(repl.hideTab);
     });
 
@@ -108,7 +104,7 @@ require([
 	});
 
 	if (!('lucid_init' in window.localStorage)) {
-		window.localStorage['lucid_init'] = "lucid.request 'README.markdown'";
+		window.localStorage['lucid_init'] = "l = lucid\nlucid.request 'README.markdown'";
 	}
 
 	window.lucid = wrapper(editor, repl);

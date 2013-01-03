@@ -29,68 +29,34 @@ A [CoffeeScript](http://coffeescript.org/) REPL terminal can be used to invoke c
 which can be accessed by either opening the 'Console' tab or pressing ESCAPE. A
 (better) JavaScript console should be provided by your browser.
 
-The following are provided:
+The following methods and properties are provided for convenience:
 
-* value
+* lucid.request(url, options)
+ * Wraps [dojo/request](http://dojotoolkit.org/reference-guide/1.8/dojo/request.html)
+ * Function used to perform AJAX requests.
+ * The returned text content will be loaded into `lucid.text`
+ * e.g. lucid.request 'http://lucided.com/demo/README.markdown'
+* lucid.print(message)
+ * Prints to repl console
+ * Alias for lucid.repl.print
+* lucid.printError(message)
+ * Prints to repl console
+ * Alias for lucid.repl.printError
+* lucid.editor
+ * Reference to the CodeMirror editor instance
+* lucid.value
  * Property used to read/write to/from the editor
-* mode
- * Sets the highlighter mode of the editor
+* lucid.mode
+ * Property used to read/write to/from the editor mode
  * Currently available:
-  * clike
-  * clojure
-  * coffeescript
-  * commonlisp
-  * css
-  * diff
-  * ecl
-  * erlang
-  * gfm
-  * go
-  * groovy
-  * haskell
-  * haxe
-  * htmlembedded
-  * htmlmixed
-  * http
-  * javascript
-  * jinja2
-  * less
-  * lua
-  * markdown
-  * mysql
-  * ntriples
-  * ocaml
-  * pascal
-  * perl
-  * php
-  * pig
-  * plsql
-  * properties
-  * python
-  * r
-  * rpm
-  * rst
-  * ruby
-  * rust
-  * scheme
-  * shell
-  * sieve
-  * smalltalk
-  * smarty
-  * sparql
-  * stex
-  * tiddlywiki
-  * tiki
-  * vb
-  * vbscript
-  * velocity
-  * verilog
-  * xml
-  * xquery
-  * yaml
-  * z80
+clike, clojure, coffeescript, commonlisp, css, diff, ecl, erlang,
+gfm, go, groovy, haskell, haxe, htmlembedded, htmlmixed, http, javascript, jinja2, less,
+lua, markdown, mysql, ntriples, ocaml, pascal, perl, php, pig, plsql, properties, python,
+r, rpm, rst, ruby, rust, scheme, shell, sieve, smalltalk, smarty, sparql, stex,
+tiddlywiki, tiki, vb, vbscript, velocity, verilog, xml, xquery, yaml, z80
 
-## Thanks
+Thanks
+------
 
 * [Dojo Toolkit](http://dojotoolkit.org/)
 * [CodeMirror](http://codemirror.net/)
