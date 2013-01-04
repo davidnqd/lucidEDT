@@ -59,12 +59,13 @@ require([
     "dojo/keys",
     "dojo/on",
     "lucided/REPL",
-    "lucided/lucid",
+    "lucided/lucidDecorator",
     "codemirror/lib/codemirror",
     "dojo/domReady!"
-], function (keys, on, REPL, wrapper) {
+], function (keys, on, REPL, lucidDecorator) {
     "use strict";
-    var repl = new REPL({}, "repl");
+    var repl = new REPL({id: "repl"});
+    document.body.appendChild(repl.domNode);
     repl.startup();
 
     var editor = CodeMirror(document.body, {
@@ -111,19 +112,19 @@ require([
 				"pagedown/Markdown.Converter"
 			], function () {
 				var converter = new Markdown.Converter();
-				self.set('content', converter.makeHtml(lucid.text));
+				self.set('content', converter.makeHtml(window.text));
 			});
 		}
 	});
 
 	if (!('lucid_init' in window.localStorage)) {
-		window.localStorage['lucid_init'] = "l = lucid\nlucid.request 'README.markdown'";
+		window.localStorage['lucid_init'] = "request 'README.markdown'";
 	}
 
-	window.lucid = wrapper(editor, repl);
+	lucidDecorator(window, editor, repl);
 
 	// Execute the command displaying results in REPL dijit
-	repl.eval('lucid localStorage.lucid_init');
+	cseval(localStorage.lucid_init);
 	repl.tabContainer.selectChild(repl.hideTab);
 });
 // -->
@@ -131,6 +132,5 @@ require([
 
 </head>
 <body class="nihilo">
-    <div id="repl"></div>
 </body>
 </html>

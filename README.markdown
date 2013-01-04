@@ -6,6 +6,7 @@ LucidEd
 * Version: 0.0
 * Author: David Duong <http://nqd.me>
 * Home Page: <http://lucided.com>
+* Github: <https://github.com/davidnqd/lucidedit>
 
 Lucid Edit is a browser-based text editor which can read/write to and from files, RESTful
 web services, and HTML5 Web Storage.
@@ -27,23 +28,23 @@ REPL Terminal
 
 A [CoffeeScript](http://coffeescript.org/) REPL terminal can be used to invoke commands
 which can be accessed by either opening the 'Console' tab or pressing ESCAPE. A
-(better) JavaScript console should be provided by your browser.
+better console (JavaScript) should be provided by your browser.
 
-The following methods and properties are provided for convenience:
+The following convenience methods and properties are provided:
 
-* lucid.request url[, options]
+* request url[, options]
  * Wraps [dojo/request](http://dojotoolkit.org/reference-guide/1.8/dojo/request.html)
  * The returned text content will be loaded into the editor
  * ex. lucid.request 'http://lucided.com/demo/README.markdown'
-* lucid.print message
+* print message
  * Alias for lucid.repl.print
-* lucid.printError message
+* printError message
  * Alias for lucid.repl.printError
-* lucid.editor
+* editor
  * Reference to the CodeMirror editor instance
-* lucid.value
+* value
  * Property used to read/write to/from the editor
-* lucid.mode
+* mode
  * Property used to read/write to/from the editor mode
  * Currently available:
 clike, clojure, coffeescript, commonlisp, css, diff, ecl, erlang,
@@ -60,3 +61,6 @@ Made Possible With
 * [CoffeeScript](http://coffeescript.org/)
 * [Dojo Toolkit](http://dojotoolkit.org/)
 * [PageDown](http://code.google.com/p/pagedown/)
+
+
+
