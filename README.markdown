@@ -1,7 +1,7 @@
 LucidEd
 =======
 
-* Version: 0.0 *PROTOTYPE*
+* Version: **PROTOTYPE**
 * Author: David Duong <http://nqd.me>
 * Home Page: <http://lucided.com>
 * Github: <https://github.com/davidnqd/lucidedit>
