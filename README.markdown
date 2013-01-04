@@ -3,7 +3,7 @@ LucidEd
 
 *THIS IS A PROTOTYPE!!*
 
-* Version: 0.0
+* Version: 0.0 *COOL, BUT EXPERIMENTAL*
 * Author: David Duong <http://nqd.me>
 * Home Page: <http://lucided.com>
 * Github: <https://github.com/davidnqd/lucidedit>
