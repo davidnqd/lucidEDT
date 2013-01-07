@@ -58,11 +58,6 @@ var dojoConfig = {
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/nihilo/nihilo.css">
 <script type="text/javascript">
 <!--
-// Initialize localStorage['lucid_init'] which is used as a customizable init script
-// See http://en.wikipedia.org/wiki/Web_storage
-if (!('lucid_init' in window.localStorage))
-	window.localStorage['lucid_init'] = "load 'README.markdown'";
-
 require([
     "dojo/keys",
     "dojo/on",
@@ -107,8 +102,10 @@ require([
 	// Show the help tab
 	decorated.help();
 
-	// Execute the command displaying results in REPL dijit
-	decorated.cseval(localStorage.lucid_init);
+	// Execute localStorage['_lucid_init'] if set or simply `load 'README.markdown'`
+	// See http://en.wikipedia.org/wiki/Web_storage
+	var init = window.localStorage['_lucid_init'] || "load 'README.markdown'";
+	decorated.cseval(init);
 	repl.tabContainer.selectChild(repl.hideTab);
 });
 // -->
