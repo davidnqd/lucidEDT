@@ -42,6 +42,9 @@ var dojoConfig = {
 	},{
 		name: "coffee-script",
 		location: "//cdnjs.cloudflare.com/ajax/libs/coffee-script/1.3.3"
+	},{
+		name: "log4javascript",
+		location: "//cdnjs.cloudflare.com/ajax/libs/log4javascript/1.4.3"
 	}]
 };
 // -->
@@ -55,24 +58,32 @@ var dojoConfig = {
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/nihilo/nihilo.css">
 <script type="text/javascript">
 <!--
+// Initialize localStorage['lucid_init'] which is used as a customizable init script
+// See http://en.wikipedia.org/wiki/Web_storage
+if (!('lucid_init' in window.localStorage))
+	window.localStorage['lucid_init'] = "load 'README.markdown'";
+
 require([
     "dojo/keys",
     "dojo/on",
     "lucided/REPL",
-    "lucided/lucidDecorator",
+    "lucided/decorate",
     "codemirror/lib/codemirror",
     "dojo/domReady!"
-], function (keys, on, REPL, lucidDecorator) {
+], function (keys, on, REPL, decorate) {
     "use strict";
+    // Custom dijit providing the bottom tabs + console
     var repl = new REPL({id: "repl"});
     document.body.appendChild(repl.domNode);
     repl.startup();
 
+    // CodeMirror editor
     var editor = CodeMirror(document.body, {
         lineNumbers: true,
         autofocus: true
     });
 
+    // Bind ESCAPE key to opening / closing console
     on(document.body, "keydown", function (evt) {
         if (evt.keyCode === keys.ESCAPE) {
             var select = (repl.tabContainer.selectedChildWidget != repl.hideTab)? repl.hideTab: repl.consoleTabContents;
@@ -80,51 +91,24 @@ require([
         }
     }); 
 
+    // Hide console when focus is lost
     on(repl, "blur", function () {
         repl.tabContainer.selectChild(repl.hideTab);
     });
 
+    // Give console input focus when console tab is selected
     on(repl.hideTab, "show", function () {
         editor.focus();
     });
 
-	repl.createTab({
-		title: "Help",
-		onShow: function() {
-			var self = this;
-			require([
-				"dojo/request",
-				"pagedown/Markdown.Converter"
-			], function (request) {
-				request('README.markdown').then(function (content) {
-					var converter = new Markdown.Converter();
-					self.set('content', converter.makeHtml(content))
-				});
-			});
-		}
-	});
+	// Decorate the window object to provide convenience methods/properties
+	var decorated = decorate(window, editor, repl);
 
-	repl.createTab({
-		title: "Pagedown Preview",
-		onShow: function() {
-			var self = this;
-			require([
-				"pagedown/Markdown.Converter"
-			], function () {
-				var converter = new Markdown.Converter();
-				self.set('content', converter.makeHtml(window.text));
-			});
-		}
-	});
-
-	if (!('lucid_init' in window.localStorage)) {
-		window.localStorage['lucid_init'] = "request 'README.markdown'";
-	}
-
-	lucidDecorator(window, editor, repl);
+	// Show the help tab
+	decorated.help();
 
 	// Execute the command displaying results in REPL dijit
-	cseval(localStorage.lucid_init);
+	decorated.cseval(localStorage.lucid_init);
 	repl.tabContainer.selectChild(repl.hideTab);
 });
 // -->

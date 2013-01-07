@@ -30,17 +30,13 @@ better console (JavaScript) should be provided by your browser.
 
 The following convenience methods and properties are provided:
 
-* request url[, options]
- * Wraps [dojo/request](http://dojotoolkit.org/reference-guide/1.8/dojo/request.html)
- * The returned text content will be loaded into the editor
- * ex. lucid.request 'http://lucided.com/demo/README.markdown'
+* load uri[, options]
+ * Loads the contents of the specified URI into the editor
+ * Highlighting is determined by mime type or extension
+ * ex. load 'http://lucided.com/demo/README.markdown'
 * print message
- * Alias for lucid.repl.print
 * printError message
- * Alias for lucid.repl.printError
-* editor
- * Reference to the CodeMirror editor instance
-* value
+* text
  * Property used to read/write to/from the editor
 * mode
  * Property used to read/write to/from the editor mode

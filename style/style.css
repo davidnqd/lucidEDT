@@ -49,8 +49,7 @@ body {
 }
 
 #repl .dijitTabPane {
-	max-height: 10em;
-	overflow: scroll;
+	max-height: 12em;
 }
 #repl .REPLOutputPane {
 	max-height: 10em;
