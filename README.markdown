@@ -38,7 +38,6 @@ The following convenience methods and properties are provided:
  * Opens a new tab with a preview of the contents of the editor
  * Currently only HTML and Markdown is supported
 * print message
-* printError message
 * text
  * Property used to read/write to/from the editor
 * mode
