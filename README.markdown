@@ -13,7 +13,7 @@ Quick Start
 
 Press ESCAPE to show or hide the console.
 
-Change the contents of the editor:
+Programatically set the contents of the editor: *(Also, just typing works too)*
 
 		text = 'Remember to give the editor focus before hitting CTRL+Z'
 
