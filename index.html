@@ -46,11 +46,6 @@ var dojoConfig = {
 };
 // -->
 </script>
-<!--
-    <link rel="stylesheet" href="lib/dijit/themes/nihilo/nihilo.css">
-    <script src="lib/dojo/dojo.js"></script>
--->
-
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dojo/dojo.js"></script>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/nihilo/nihilo.css">
 <script type="text/javascript">
@@ -82,11 +77,6 @@ require([
 	        repl.tabContainer.selectChild(select);
         }
     }); 
-
-    // Hide console when focus is lost
-    on(repl, "blur", function () {
-        repl.tabContainer.selectChild(repl.hideTab);
-    });
 
     // Give console input focus when console tab is selected
     on(repl.hideTab, "show", function () {

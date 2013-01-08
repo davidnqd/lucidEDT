@@ -26,6 +26,9 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.CodeMirror-sizer {
+	margin-bottom: 3em;
+}
 
 #repl {
    position: absolute;
