@@ -1,5 +1,5 @@
 /*
-    LucidEd - Lucid Edit, a browser-based text editor
+    lucidEDT - Lucid Edit, a browser-based text editor
     Copyright (C) 2012  David Duong
 
     This program is free software: you can redistribute it and/or modify
