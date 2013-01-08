@@ -6,48 +6,54 @@ lucidEDT
 * Home Page: <http://lucidedt.com>
 * Github: <https://github.com/davidnqd/lucidedt>
 
-A browser-based editor combined with a CoffeeScript console.
+A browser-based editor combined with a [CoffeeScript][] console.
 
-TRY IT!
--------
+Quick Start
+-----------
 
 Press ESCAPE to show or hide the console.
 
-Load a URI: *Restricted By: [same origin policy](http://en.wikipedia.org/wiki/Same_origin_policy)*
+Change the contents of the editor:
 
-		load 'index.html'
+		text = 'Remember to give the editor focus before hitting CTRL+Z'
 
-Change highlighting to JavaScript (`load` above will usually do this for you):
+Change highlighting: *(`load` below will usually do this for you)*
 
 		mode = 'javascript'
 
-Evaluate editor contents as CoffeeScript (cseval) or JavaScript (eval):
+Load a URI: *(Remember the [same origin policy][] and [Cross-origin resource sharing][])*
 
-		cseval text		# Note: `text` is a special property which reads/write to the
-		eval text		# editor contents
+		load 'index.html'
+
+Evaluate [CoffeeScript][] (cseval) or JavaScript (eval):
+
+		cseval text		# Execute the editor contents as CoffeeScript
+		eval text		# Execute the editor contents as JavaScript
 
 Preview:
 
-		preview 'Preview Tab'
+		preview 'Some Tab Name'	# Specify a tab name
+        do preview				# Or simply use the default ('Preview')
 
-Store data (properties of localStorage persist across sessions):
+Store data (properties of [localStorage][] persist across sessions):
 
 		text = localStorage.foo
 
-Load data from localStorage:
+Load data from [localStorage][]:
 
 		localStorage.foo = text
 
 Search and replace:
 
-		text = text.replace /lucidEDT/g, 'Lucid Edit'
+		text = text.replace 'lucidEDT', 'Lucid Edit'
+		text = text.replace /#.*/g, ''
 
-Show Help:
+Show this help as HTML:
 
 		do help
 
-Used
-----
+Links
+-----
 
 * [CodeMirror](http://codemirror.net/)
     * Editor component with syntax highlighting
@@ -57,3 +63,8 @@ Used
     * Dojo's AMD loader and dijits heavily used
 * [PageDown](http://code.google.com/p/pagedown/)
    * Used to turn Markdown into HTML
+
+[localStorage]: http://en.wikipedia.org/wiki/Web_storage#localStorage
+[CoffeeScript]: http://www.coffeescript.org
+[same origin policy]: http://en.wikipedia.org/wiki/Same_origin_policy
+[Cross-origin resource sharing]: http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
