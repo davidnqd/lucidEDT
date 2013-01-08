@@ -3,7 +3,7 @@ lucidEDT
 
 * Version: **PROTOTYPE**
 * Author: David Duong <http://nqd.me>
-* Home Page: <http://lucided.com>
+* Home Page: <http://lucidedt.com>
 * Github: <https://github.com/davidnqd/lucidedt>
 
 Lucid Edit is a browser-based text editor which can read/write to and from files, RESTful
@@ -35,6 +35,8 @@ The following convenience methods and properties are provided:
  * Highlighting is determined by mime type or extension
  * ex. load 'http://lucided.com/demo/README.markdown'
 * preview title
+ * Opens a new tab with a preview of the contents of the editor
+ * Currently only HTML and Markdown is supported
 * print message
 * printError message
 * text
