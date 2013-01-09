@@ -21,8 +21,7 @@
     <meta charset="utf-8">
     <title>lucidEDT - Lucid Edit, a browser-based text editor</title>
 
-    <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/codemirror/2.37/codemirror.css">
 
 <script type="text/javascript">
 <!--
@@ -35,7 +34,7 @@ var dojoConfig = {
 		location: pathname.replace(/\/[^/]*$/, '/lib/lucidedt')
 	},{
 		name: "codemirror",
-		location: pathname.replace(/\/[^/]*$/, '/lib/codemirror')
+		location: '//cdn.jsdelivr.net/codemirror/2.37'
 	},{
 		name: "pagedown",
 		location: "//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0"
@@ -55,7 +54,7 @@ require([
     "dojo/on",
     "lucidedt/REPL",
     "lucidedt/decorate",
-    "codemirror/lib/codemirror",
+    "codemirror/codemirror",
     "dojo/domReady!"
 ], function (keys, on, REPL, decorate) {
     "use strict";
@@ -98,6 +97,7 @@ require([
 // -->
 </script>
 
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="nihilo">
 </body>
