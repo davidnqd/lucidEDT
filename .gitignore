@@ -1,4 +1,4 @@
-lib/codemirror
+lib/codemirror*
 lib/dijit/
 lib/dojo/
 lib/dojox/
