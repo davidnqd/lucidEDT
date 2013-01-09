@@ -21,11 +21,11 @@ Change highlighting: *(`load` below will usually do this for you)*
 
 		mode = 'javascript'
 
-Load a URI: *(Remember the [same origin policy][] and [Cross-origin resource sharing][])*
+Load a URI: *(Remember the [same origin policy][] and [cross-origin resource sharing][])*
 
 		load 'index.html'
 
-Evaluate [CoffeeScript][] (cseval) or JavaScript (eval):
+Evaluate [CoffeeScript][] or JavaScript:
 
 		cseval text		# Execute the editor contents as CoffeeScript
 		eval text		# Execute the editor contents as JavaScript
