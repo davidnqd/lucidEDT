@@ -21,7 +21,7 @@
     <meta charset="utf-8">
     <title>lucidEDT - Lucid Edit, a browser-based text editor</title>
 
-    <link rel="stylesheet" href="lib/codemirror-3.0/lib/codemirror.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.23.0/codemirror.css"/>
 
 <script type="text/javascript">
 <!--
@@ -34,8 +34,7 @@ var dojoConfig = {
 		location: pathname.replace(/\/[^/]*$/, '/lib/lucidedt')
 	},{
 		name: "codemirror",
-		location: pathname.replace(/\/[^/]*$/, '/lib/codemirror-3.0')
-		//location: '//cdn.jsdelivr.net/codemirror/2.37'
+		location: "//cdnjs.cloudflare.com/ajax/libs/codemirror/3.23.0"
 	},{
 		name: "pagedown",
 		location: "//cdnjs.cloudflare.com/ajax/libs/pagedown/1.0"
@@ -47,7 +46,7 @@ var dojoConfig = {
 // -->
 </script>
     <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dojo/dojo.js"></script>
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/nihilo/nihilo.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.8.2/dijit/themes/nihilo/nihilo.css"/>
 <script type="text/javascript">
 <!--
 require([
@@ -55,7 +54,7 @@ require([
     "dojo/on",
     "lucidedt/REPL",
     "lucidedt/decorate",
-    "codemirror/lib/codemirror",
+    "codemirror/codemirror",
     "dojo/domReady!"
 ], function (keys, on, REPL, decorate) {
     "use strict";
