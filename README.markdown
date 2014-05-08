@@ -15,42 +15,42 @@ Press ESCAPE to show or hide the console.
 
 Programatically set the contents of the editor: *(Also, just typing works too)*
 
-		text = 'Remember to give the editor focus before hitting CTRL+Z'
+	text = 'Remember to give the editor focus before hitting CTRL+Z'
 
 Change highlighting: *(`load` below will usually do this for you)*
 
-		mode = 'javascript'
+	mode = 'javascript'
 
 Load a URI: *(Remember the [same origin policy][] and [cross-origin resource sharing][])*
 
-		load 'index.html'
+	load 'index.html'
 
 Evaluate [CoffeeScript][] or JavaScript:
 
-		cseval text		# Execute the editor contents as CoffeeScript
-		eval text		# Execute the editor contents as JavaScript
+	cseval text		# Execute the editor contents as CoffeeScript
+	eval text		# Execute the editor contents as JavaScript
 
 Preview:
 
-		preview 'Some Tab Name'	# Specify a tab name
+	preview 'Some Tab Name'	# Specify a tab name
         do preview				# Or simply use the default ('Preview')
 
 Store data (properties of [localStorage][] persist across sessions):
 
-		text = localStorage.foo
+	text = localStorage.foo
 
 Load data from [localStorage][]:
 
-		localStorage.foo = text
+	localStorage.foo = text
 
 Search and replace:
 
-		text = text.replace 'lucidEDT', 'Lucid Edit'
-		text = text.replace /#.*/g, ''
+	text = text.replace 'lucidEDT', 'Lucid Edit'
+	text = text.replace /#.*/g, ''
 
 Show this help as HTML:
 
-		do help
+	do help
 
 Links
 -----
