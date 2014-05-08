@@ -4,7 +4,7 @@ lucidEDT
 * Version: **PROTOTYPE**
 * Author: David Duong <http://nqd.me>
 * Home Page: <http://lucidedt.com>
-* Github: <https://github.com/davidnqd/lucidedt>
+* GitHub: <http://nqd.me/lucidedt>
 
 A browser-based editor combined with a [CoffeeScript][] console.
 
